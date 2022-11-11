@@ -1,0 +1,86 @@
+$button-font-family: interit;
+$button-font-size: $font-size-base;
+$button-font-weight: $font-weight-regular;
+$button-line-height: $line-height-base;
+$button-padding-x: 0.75rem;
+$button-padding-y: 0.625rem;
+
+$button-color: $color-white;
+$button-hover-color: $button-color;
+$button-disabled-color: $button-color;
+
+$button-active-color: $button-color;
+
+$button-background-color: $color-green-300;
+$button-hover-background-color: $color-green-500;
+$button-disabled-background-color: $color-gray-300;
+$button-active-background-color: lighten($button-hover-background-color, 20%);
+
+$button-border-color: $button-background-color;
+$button-hover-border-color: $button-hover-background-color;
+$button-disabled-border-color: $button-disabled-background-color;
+$button-active-border-color: $button-active-background-color;
+
+$button-border-width: $border-width;
+$button-border-radius: 0.875rem;
+$button-cursor: $cursor-pointer;
+$button-focus-box-shadow: 0 0 0 0.2rem rgba($button-background-color, 0.25);
+$button-min-width: 10.625rem;
+
+$button-outline-color: $button-background-color;
+$button-outline-background-color: $button-color;
+$button-outline-border-color: $button-background-color;
+$button-outline-hover-color: $button-color;
+$button-outline-hover-background-color: $button-background-color;
+$button-outline-hover-border-color: $button-border-color;
+$button-outline-active-color: $button-hover-color;
+$button-outline-active-background-color: $button-background-color;
+$button-outline-active-border-color: $button-background-color;
+
+$button-red-color:  $color-red;
+$button-red-background-color: $color-white;
+$button-red-border-color: $button-red-color;
+$button-red-outline-color: $button-red-background-color;
+$button-red-hover-color:  $color-white;
+$button-red-hover-background-color: $color-red;
+$button-red-hover-border-color: $button-red-hover-background-color;
+$button-red-active-color: $color-white;
+$button-red-active-background-color:  $button-red-color;
+$button-red-active-border-color: $button-red-active-background-color;
+$button-red-active-hover-background-color:   darken($button-red-color, 20%);
+$button-red-active-hover-border-color:  darken($button-red-color, 20%);
+$button-red-focus-box-shadow: 0 0 0 0.2rem rgba($color-red,  0.25);
+
+.button {
+  @include button();
+}
+.button-outline {
+  @include button('outline');
+}
+.button-red {
+  @include button('red');
+}
+.button-square {
+  @include button('square');
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+  }
+  a.button, a.button-outline, a.button-red {
+    width:100%;
+    @media (min-width: 400px) {
+      width: 250px;
+
+    }
+@media (min-width: 768px) {
+  width: unset;
+
+  }
+  }
+}
