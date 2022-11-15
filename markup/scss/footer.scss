@@ -1,13 +1,38 @@
-.footer {
+.footer-wrapper {
   width: 100%;
   background: url("./../../assets/img/footer-bg.jpg") no-repeat;
   background-size: cover;
+}
+.footer {
+  width: 100%;
+
   padding: 20px 20px 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   color: $color-white;
-  .all-rights {
-    font-size: 12px;
+
+  @media (min-width: 500px) {
+    padding: 40px;
+  }
+  @media (min-width: 992px) {
+    flex-direction: row;
+    padding: 20px 0 80px;
+    gap:90px;
+  }
+  .logo {
+    @media (min-width: 992px) {
+      align-items: baseline;
+    }
+  }
+}
+.all-rights {
+  font-size: 12px;
+  padding-left:30px;
+  color: $color-white;
+  padding-bottom: 30px;
+  @media (min-width: 992px) {
+
+  padding-left:0;
   }
 }

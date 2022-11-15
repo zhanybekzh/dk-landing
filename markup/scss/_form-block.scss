@@ -1,24 +1,33 @@
-.form-block {
-   position: relative;
-   @include shadow();
-   min-height: 500px;
-   width:300px;
-   margin: 0 auto 120px;
-   background-color: $color-white;
-   border-radius: 15px;
-   padding: 60px 20px;
-   .section-title {
-      text-align: center;
-   }
-   &::before {
-      content: "";
-      width: 300px;
-      height: 400px;
+.container-wrapper-form {
+  position: relative;
+  &::before {
+    content: "";
+    width: 300px;
+    height: 400px;
 
-      position: absolute;
+    position: absolute;
+    top: -110px;
+    right: -40px;
+    z-index: 0;
+    background: url("./../../assets/img/mail.svg") no-repeat;
+    background-size: contain;
+    @media (min-width: 992px) {
+      width: 360px;
       top: -110px;
-      right:-40px;
-      z-index:-1;
-      background: url('./../../assets/img/mail.svg') no-repeat;
+      right: -130px;
     }
+  }
+}
+.form-block {
+  position: relative;
+  @include shadow();
+  min-height: 500px;
+  margin: 0 auto 120px;
+  background-color: $color-white;
+  border-radius: 15px;
+  padding: 60px 20px;
+  .section-title {
+    text-align: center;
+  }
+
 }

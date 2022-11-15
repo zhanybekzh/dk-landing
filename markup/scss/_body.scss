@@ -12,12 +12,11 @@ body {
   main {
     flex: 1 1 auto;
     background-color: $color-gray;
-    z-index: 0;
+    overflow: hidden;
   }
 
   footer {
     flex: 0 0 auto;
     width: 100%;
-    min-height: 320px;
   }
 }

@@ -1,0 +1,11 @@
+.body .only-mobile {
+   @media(min-width: 992px) {
+      display: none !important;
+   }
+}
+.body .only-desktop {
+   display: none ;
+   @media(min-width: 992px) {
+      display: flex ;
+   }
+}

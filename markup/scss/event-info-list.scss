@@ -3,22 +3,27 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
     & .list-item {
-      margin-left: 20px;
+      margin-left: 30px;
       position: relative;
       &::before {
-         content: '';
-         display: block;
-         width: 8px;
-         height: 8px;
-         background-color: $color-yellow;
-         border-radius: 50%;
-         position: absolute;
-         top:9px;
-         left: -20px;
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color-yellow;
+        border-radius: 50%;
+        position: absolute;
+        top: 9px;
+        left: -30px;
       }
-   }
-
+    }
+    @media (min-width: 992px) {
+      padding: 40px;
+    }
   }
 }

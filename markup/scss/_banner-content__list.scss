@@ -3,11 +3,20 @@
    display: flex;
    flex-direction: column;
    gap:15px;
+   z-index:2;
+   @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
    & .list-item {
       display: flex;
       gap:20px;
       min-height: 50px;
       align-items: center;
+      @media (min-width: 992px) {
+        flex-basis: 250px;
+
+       }
       &__icon {
          flex-shrink: 0;
          width:45px;
@@ -17,6 +26,14 @@
          display: flex;
          align-items: center;
          justify-content: center;
+      }
+      &__text > a {
+         color: $color-black;
+         text-decoration: none;
+         cursor: pointer;
+         &:hover {
+            text-decoration: underline;
+         }
       }
    }
 }
